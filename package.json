@@ -1,0 +1,7 @@
+{
+  "name": "bot-twitter-telegram",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Vinícios Grama <vinyirun1@gmail.com>",
+  "license": "MIT"
+}
