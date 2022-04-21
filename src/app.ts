@@ -18,7 +18,9 @@ bot.hears(
       return ctx.reply("This tweet does not have a video");
     }
 
-    ctx.replyWithVideo(urlVideo);
+    ctx.replyWithVideo(urlVideo, {
+      reply_to_message_id: ctx.message.message_id,
+    });
   }
 );
 
