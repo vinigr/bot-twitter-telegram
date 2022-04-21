@@ -1,12 +1,12 @@
 {
   "name": "bot-twitter-telegram",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "Vinícios Grama <vinyirun1@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.0.0",
-    "koa": "^2.13.4"
+    "koa": "^2.13.4",
+    "twitter-api-v2": "^1.12.0"
   },
   "devDependencies": {
     "@types/koa": "^2.13.4",
