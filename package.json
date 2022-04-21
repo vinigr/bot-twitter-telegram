@@ -5,6 +5,7 @@
   "author": "Vinícios Grama <vinyirun1@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "koa": "^2.13.4"
   },
   "devDependencies": {
