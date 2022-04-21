@@ -12,7 +12,13 @@ const bot = new Telegraf(token);
 bot.hears(
   /https?:\/\/twitter.com\/[0-9-a-zA-Z_]{1,20}\/status\/([0-9]*)/,
   async (ctx) => {
-    ctx.reply(await getTweet(ctx.match[1]));
+    const urlVideo = await getTweet(ctx.match[1]);
+
+    if (!urlVideo) {
+      return ctx.reply("This tweet does not have a video");
+    }
+
+    ctx.replyWithVideo(urlVideo);
   }
 );
 

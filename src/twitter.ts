@@ -12,15 +12,12 @@ export const getTweet = async (tweetId) => {
     include_card_uri: true,
   });
 
-  const mediaUrl = tweet.extended_entities.media?.[0].video_info.variants.find(
+  const mediaUrl = tweet.extended_entities?.media?.[0].video_info.variants.find(
     (file) => file.content_type == "video/mp4"
   );
 
-  if (mediaUrl?.url) {
-    return mediaUrl.url;
-  }
+  return mediaUrl?.url;
 
-  return "This tweet does not have a video";
   // const quality = mediaUrl.map((file) => {
   //   return file.url.includes("amplify_video")
   //     ? file.url.split("/")[6]
