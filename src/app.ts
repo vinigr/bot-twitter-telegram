@@ -24,8 +24,12 @@ bot.hears(
   }
 );
 
-bot.on("message", (ctx) => {
-  ctx.reply("Hello");
+bot.command("start", (ctx) => {
+  return ctx.reply("Enter the video tweet link");
+});
+
+bot.on("text", (ctx) => {
+  return ctx.reply("Please enter the video tweet link");
 });
 
 bot.launch();
